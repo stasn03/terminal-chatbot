@@ -25,17 +25,8 @@ def get_response(content):
     )
     return chat_response.choices[0].message.content
 
-response= get_response("Hi! Where are you from?")
-print(response)
-# print("----")
+while True:
+    content= input()
+    print(get_response(content))
 
-# responses= []
-# for i in range(10):
-#     if i == 0:
-#         responses.append(get_response(response))
-#     else:
-#         responses.append(get_response(responses[i-1]))
-
-# for message in responses:
-#     print(message)
     
