@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from mistralai import Mistral
 
+
 load_dotenv()
 api_key= os.environ["API_KEY"]
 model= "mistral-small-latest"
@@ -15,7 +16,7 @@ def get_response(content):
         messages= [
             {
                 "role": "system",
-                "content": "My chatbot assistent for code"
+                "content": "My chatbot assistent for code. Remember that I'm using EndevourOS"
             },
             {
                 "role": "user",
@@ -25,8 +26,5 @@ def get_response(content):
     )
     return chat_response.choices[0].message.content
 
-while True:
-    content= input()
-    print(get_response(content))
 
-    
+

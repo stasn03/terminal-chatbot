@@ -1,0 +1,10 @@
+{
+  "prompt_toolkit": {
+    "prompt": "bold",
+    "": "bg:#7F3FBF #ffffff"
+  },
+  "rich": {
+    "syntax_theme": "monokai",
+    "panel_border_style": "cyan"
+  }
+}
