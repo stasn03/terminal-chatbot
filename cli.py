@@ -1,15 +1,18 @@
-import json
 from rich import print
 from prompt_toolkit import prompt
 from prompt_toolkit.styles import Style
 from rich.console import Console
 from rich.syntax import Syntax
-from rich.panel import Panel
-import script  #
+import os
+import json
+import script  
 
 console = Console()
 
-with open("config.json") as f:
+script_dir = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(script_dir, "config.json")
+
+with open(config_path, "r") as f:
     styles_config = json.load(f)
 
 style = Style.from_dict(styles_config["prompt_toolkit"])
@@ -33,8 +36,7 @@ def render_mixed_text(text: str):
                 theme=styles_config["rich"]["syntax_theme"],
                 line_numbers=True,
             )
-            panel = Panel(syntax, border_style=styles_config["rich"]["panel_border_style"])
-            console.print(panel)
+            console.print(syntax)  # No border, just syntax highlighting
         elif inside_code:
             code_lines.append(line)
         else:
