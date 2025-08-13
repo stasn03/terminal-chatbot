@@ -12,6 +12,7 @@ A terminal-based chatbot powered by the Mistral language model, designed for sea
 ## Run With Docker
 
 ### Prerequisites
+- Docker installed on your system (get it here: https://www.docker.com/)
 - MistralAI API key  (get one here: https://console.mistral.ai/home)
 
 ### Steps
