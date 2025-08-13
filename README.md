@@ -7,8 +7,7 @@ A terminal-based chatbot powered by the Mistral language model, designed for sea
 - **Interactive Terminal Interface**: Engage in real-time conversations directly within your terminal.  
 - **Syntax Highlighting**: Enjoy color-coded responses for enhanced readability.  
 - **Code Block Detection**: Automatically identifies and formats code snippets within conversations.  
-- **Customizable Styling**: Easily adjust the appearance through configuration files.  
-- **Persistent Chat History**: Maintain a continuous conversation with memory support.  
+- **Customizable Styling**: Easily adjust the appearance through configuration files. 
 
 ## Run With Docker
 
